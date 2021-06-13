@@ -17,7 +17,7 @@ public class Employee {
     private Long employeeId;
     @Column
     private String name;
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     private GenderCode gender;
     @Column
     private Integer age;

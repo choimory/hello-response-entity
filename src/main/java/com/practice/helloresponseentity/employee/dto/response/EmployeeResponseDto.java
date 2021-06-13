@@ -8,7 +8,7 @@ import lombok.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class EmployeeDto {
+public class EmployeeResponseDto {
     private Long employeeId;
     private String name;
     private GenderCode gender;

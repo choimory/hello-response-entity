@@ -13,6 +13,7 @@ public class CommonExceptionHandler {
 
     @ExceptionHandler({RuntimeException.class})
     public ResponseEntity<CommonResponseData> internalServerError(Exception e){
+        e.printStackTrace();
         return new ResponseEntity<>(CommonResponseData.builder()
                                                         .statusCode(CommonResponseCode.INTERNAL_SERVER_ERROR.getCode())
                                                         .statusMessage(CommonResponseCode.INTERNAL_SERVER_ERROR.getMessage())

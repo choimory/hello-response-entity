@@ -21,7 +21,7 @@ public class EmployeeController {
     @GetMapping("/{employeeId}")
     public ResponseEntity<CommonResponseData> getEmployee(@PathVariable final Long employeeId){
         return new ResponseEntity<>(CommonResponseData.builder()
-                                                        //@Builder.default 및 기본값 초기화 해놨으므로 OK일시엔 생략
+                                                        //@Builder.default 및 초기화를 OK로 해놨으므로 OK일시엔 생략가능
                                                         //.statusCode(CommonResponseCode.OK.getCode())
                                                         //.statusMessage(CommonResponseCode.OK.getMessage())
                                                         .data(employeeService.getEmployee(EmployeeRequestDto.builder()
