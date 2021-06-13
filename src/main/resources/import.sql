@@ -1,0 +1,1 @@
+INSERT INTO EMPLOYEE (ADDRESS, AGE, GENDER, NAME) values ('주소', '30', 'MALE', '이름')
