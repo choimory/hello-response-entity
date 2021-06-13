@@ -7,6 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum CommonResponseCode {
     INVALID(100, "잘못된 요청입니다")
+    , EMPTY(101, "데이터가 없습니다")
 
     , OK(200, "정상 처리되었습니다")
 
