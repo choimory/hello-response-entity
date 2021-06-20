@@ -13,7 +13,7 @@ spring:
       path: /h2
       enabled: true
   jpa:
-    open-in-view: false
+    open-in-view: true
     #hibernate:
       #ddl-auto: none
     properties:
