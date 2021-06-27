@@ -8,5 +8,7 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public class EmployeeRequestDto {
-    private final Long employeeId;
+    private final Long employeeId; //직원 고유번호
+    private final Long employeeAgeFrom; //직원나이 범위검색 최소값
+    private final Long employeeAgeTo; //직원나이 범위검색 최대값
 }

@@ -22,9 +22,9 @@ public class CommonExceptionHandler {
 
     @ExceptionHandler({CommonCustomException.class})
     public ResponseEntity<CommonResponseData<?>> customException(CommonCustomException e){
-        return new ResponseEntity<>(CommonResponseData.builder()
-                                                        .statusCode(e.getCode())
-                                                        .statusMessage(e.getMessage())
-                                                        .build(), HttpStatus.OK);
+        return ResponseEntity.ok(CommonResponseData.builder()
+                                                    .statusCode(e.getCode())
+                                                    .statusMessage(e.getMessage())
+                                                    .build());
     }
 }
