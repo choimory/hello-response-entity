@@ -19,7 +19,7 @@ public class EmployeeController {
     private final EmployeeService employeeService;
 
     @GetMapping("/{employeeId}")
-    public ResponseEntity<CommonResponseData> getEmployee(@PathVariable final Long employeeId){
+    public ResponseEntity<CommonResponseData<?>> getEmployee(@PathVariable final Long employeeId){
         return new ResponseEntity<>(CommonResponseData.builder()
                                                         //@Builder.default 및 초기화를 OK로 해놨으므로 OK일시엔 생략가능
                                                         //.statusCode(CommonResponseCode.OK.getCode())

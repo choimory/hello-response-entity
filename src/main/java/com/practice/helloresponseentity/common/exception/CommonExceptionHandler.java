@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class CommonExceptionHandler {
 
     @ExceptionHandler({RuntimeException.class})
-    public ResponseEntity<CommonResponseData> internalServerError(Exception e){
+    public ResponseEntity<CommonResponseData<?>> internalServerError(Exception e){
         e.printStackTrace();
         return new ResponseEntity<>(CommonResponseData.builder()
                                                         .statusCode(CommonResponseCode.INTERNAL_SERVER_ERROR.getCode())
@@ -21,7 +21,7 @@ public class CommonExceptionHandler {
     }
 
     @ExceptionHandler({CommonCustomException.class})
-    public ResponseEntity<CommonResponseData> customException(CommonCustomException e){
+    public ResponseEntity<CommonResponseData<?>> customException(CommonCustomException e){
         return new ResponseEntity<>(CommonResponseData.builder()
                                                         .statusCode(e.getCode())
                                                         .statusMessage(e.getMessage())
