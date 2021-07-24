@@ -1,4 +1,4 @@
-package com.practice.helloresponseentity.common.response.util;
+package com.practice.helloresponseentity.common.response.dto;
 
 import com.practice.helloresponseentity.common.response.code.CommonResponseCode;
 import lombok.AllArgsConstructor;
@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CommonResponseData <T> {
+public class CommonResponseDto<T> {
     @Builder.Default
     private final Integer statusCode = CommonResponseCode.OK.getCode();
     @Builder.Default
