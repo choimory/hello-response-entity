@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice("com.practice.helloresponseentity")
 public class CommonExceptionHandler {
 
-    @ExceptionHandler({RuntimeException.class})
+    @ExceptionHandler({Exception.class})
     public ResponseEntity<CommonResponseDto<?>> internalServerError(Exception e){
         e.printStackTrace();
         return new ResponseEntity<>(CommonResponseDto.builder()
